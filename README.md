@@ -48,3 +48,18 @@ The project is currently in the design and development stage. Mechanical systems
 ## Notes
 
 This repository documents the design process, component choices, and development progress of the rocket.
+[overengineered rocket-bom.csv](https://github.com/user-attachments/files/27089181/overengineered.rocket-bom.csv)
+
+## BOM LIST
+
+## Components
+
+| Name                     | Purpose                                                                 | Qty | Total Cost (USD) | Link | Distributor |
+|--------------------------|-------------------------------------------------------------------------|-----|------------------|------|-------------|
+| Parachute D200           | Parachute used for recovery system                                      | 1   | 4.00             | [Link](https://podarini.ru/zapasnye-chasti/obtekateli-nosovye-golovnaya-chast_1/parashyut-d200-chyornyy/) | podarini |
+| RD1-20-5 Rocket Motor    | Small solid-fuel motor with ignition and delay ejection charge         | 1   | 4.93             | [Link](https://podarini.ru/modelnye-raketnye-dvigateli/modelnyy-raketnyy-dvigatel-rd1-20-5/) | podarini |
+| SG90 Servo               | Controls TVC and opens recovery mechanism                               | 4   | 5.24             | [Link](https://aliexpress.ru/item/1005008707927948.html?sku_id=12000048410686232) | aliexpress |
+| ESP32                    | Main microcontroller for control and sensor processing                  | 1   | 3.54             | [Link](https://aliexpress.ru/item/1005008889768599.html?sku_id=12000047095028657) | aliexpress |
+| Protoboard               | Platform for soldering and organizing electronics                       | 1   | 3.51             | [Link](https://aliexpress.ru/item/1005008463998977.html?sku_id=12000056485241734) | aliexpress |
+| BMP580                   | Barometric sensor for altitude and pressure measurement                 | 1   | 1.52             | [Link](https://aliexpress.ru/item/1005009166860350.html?sku_id=12000056153127416) | aliexpress |
+
