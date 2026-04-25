@@ -1,7 +1,8 @@
 # THErocket
 
 A personal rocket engineering project focused on designing and building a custom rocket with a thrust vector control system and a servo-based recovery mechanism.
-
+## Why did i want to make this project?
+I have always wanted to build something that can fly really high and land gracefully. I also plan to place my LEGO Mandalorian figure inside the rocket so it can be my first astronaut.
 ## Project Overview
 
 This project explores the development of my own rocket architecture, including:
