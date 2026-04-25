@@ -34,6 +34,11 @@ Below is the current overall design of the rocket.
 
 ![Overall rocket design](https://github.com/user-attachments/assets/d11ac5f2-45d2-4cfc-93e3-8f96ef815555)
 
+
+## The wiring
+<img width="300" height="300" alt="Frame 3" src="https://github.com/user-attachments/assets/92f4fa91-b2f7-4ba4-9450-236bb2fb4a6e" />
+
+
 ## Main Components
 
 - **ESP32** — main microcontroller used for control logic
