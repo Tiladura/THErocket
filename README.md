@@ -48,7 +48,7 @@ The project is currently in the design and development stage. Mechanical systems
 ## Notes
 
 This repository documents the design process, component choices, and development progress of the rocket.
-[overengineered rocket-bom.csv](https://github.com/user-attachments/files/27089181/overengineered.rocket-bom.csv)
+
 
 ## BOM LIST
 
