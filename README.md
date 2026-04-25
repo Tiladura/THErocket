@@ -52,8 +52,6 @@ This repository documents the design process, component choices, and development
 
 ## BOM LIST
 
-## Components
-
 | Name                     | Purpose                                                                 | Qty | Total Cost (USD) | Link | Distributor |
 |--------------------------|-------------------------------------------------------------------------|-----|------------------|------|-------------|
 | Parachute D200           | Parachute used for recovery system                                      | 1   | 4.00             | [Link](https://podarini.ru/zapasnye-chasti/obtekateli-nosovye-golovnaya-chast_1/parashyut-d200-chyornyy/) | podarini |
