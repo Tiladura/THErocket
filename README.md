@@ -34,6 +34,11 @@ Below is the current overall design of the rocket.
 
 ![Overall rocket design](https://github.com/user-attachments/assets/d11ac5f2-45d2-4cfc-93e3-8f96ef815555)
 
+### Wiring/PCB
+| **Schematic** | **PCB** | **3D Render** |
+|---------------|---------|---------------|
+|<img width="1177" height="850" alt="image" src="https://github.com/user-attachments/assets/681b73d7-62b1-41f9-a985-d52325bb519a" />|<img width="829" height="790" alt="image" src="https://github.com/user-attachments/assets/a67f90a4-6002-4b17-8b16-7a8ff7722644" />|<img width="946" height="752" alt="image" src="https://github.com/user-attachments/assets/045a8e83-6705-43f9-9edb-bf12653fbb98" />
+
 
 ## The wiring
 <img width="300" height="300" alt="Frame 3" src="https://github.com/user-attachments/assets/92f4fa91-b2f7-4ba4-9450-236bb2fb4a6e" />
