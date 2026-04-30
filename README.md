@@ -53,7 +53,7 @@ The electronics are built around an ESP32 microcontroller, which handles sensor 
 
 | Schematic | PCB Layout | 3D Render |
 |----------|------------|-----------|
-| <img width="700" height="573" alt="Schematic" src="https://github.com/user-attachments/assets/36ee5b82-a565-44b6-810b-d0dc6b299e04" /> | <img width="829" height="790" alt="PCB layout" src="https://github.com/user-attachments/assets/a67f90a4-6002-4b17-8b16-7a8ff7722644" /> | <img width="946" height="752" alt="PCB 3D render" src="https://github.com/user-attachments/assets/045a8e83-6705-43f9-9edb-bf12653fbb98" /> |
+| <img width="820" height="790" alt="Schematic" src="https://github.com/user-attachments/assets/36ee5b82-a565-44b6-810b-d0dc6b299e04" /> | <img width="829" height="790" alt="PCB layout" src="https://github.com/user-attachments/assets/a67f90a4-6002-4b17-8b16-7a8ff7722644" /> | <img width="946" height="752" alt="PCB 3D render" src="https://github.com/user-attachments/assets/045a8e83-6705-43f9-9edb-bf12653fbb98" /> |
 
 ## Main Components
 
