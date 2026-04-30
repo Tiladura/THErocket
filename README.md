@@ -81,3 +81,4 @@ This repository documents the design process, component choices, and development
 | Servo SG90 | Operates TVC and opens the recovery mechanism in the cone | 4 | $5.24 | AliExpress | [Product](https://aliexpress.ru/item/1005008707927948.html?sku_id=12000048410686232) |
 
 **Total Cost:** $51.36
+**Shipping** $25.31
