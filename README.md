@@ -45,7 +45,7 @@ Below is the current overall design of the rocket.
 
 - **ESP32** — main microcontroller used for control logic
 - **BMP388** — barometric sensor for altitude and pressure tracking
-- **IMU** — used for motion and orientation sensing
+- **MPU-6050** — used for motion and orientation sensing
 - **SG90 servos** — used for actuation in the control and recovery systems
 - **RD1-20-5 rocket motor** — solid-fuel hobby rocket motor
 
@@ -60,12 +60,24 @@ This repository documents the design process, component choices, and development
 
 ## BOM LIST
 
-| Name                     | Purpose                                                                 | Qty | Total Cost (USD) | Link | Distributor |
-|--------------------------|-------------------------------------------------------------------------|-----|------------------|------|-------------|
-| Parachute D200           | Parachute used for recovery system                                      | 1   | 4.00             | [Link](https://podarini.ru/zapasnye-chasti/obtekateli-nosovye-golovnaya-chast_1/parashyut-d200-chyornyy/) | podarini |
-| RD1-20-5 Rocket Motor    | Small solid-fuel motor with ignition and delay ejection charge         | 1   | 4.93             | [Link](https://podarini.ru/modelnye-raketnye-dvigateli/modelnyy-raketnyy-dvigatel-rd1-20-5/) | podarini |
-| SG90 Servo               | Controls TVC and opens recovery mechanism                               | 4   | 5.24             | [Link](https://aliexpress.ru/item/1005008707927948.html?sku_id=12000048410686232) | aliexpress |
-| ESP32                    | Main microcontroller for control and sensor processing                  | 1   | 3.54             | [Link](https://aliexpress.ru/item/1005008889768599.html?sku_id=12000047095028657) | aliexpress |
-| Protoboard               | Platform for soldering and organizing electronics                       | 1   | 3.51             | [Link](https://aliexpress.ru/item/1005008463998977.html?sku_id=12000056485241734) | aliexpress |
-| BMP580                   | Barometric sensor for altitude and pressure measurement                 | 1   | 1.52             | [Link](https://aliexpress.ru/item/1005009166860350.html?sku_id=12000056153127416) | aliexpress |
+| Name | Purpose | Quantity | Total Cost (USD) | Distributor | Link |
+|---|---:|---:|---:|---|---|
+| Custom PCB | PCB which will connect every part | 5 | $10.52 | JLCPCB | — |
+| And Another Capacitor | 470uF 25V Aluminum Electrolytic Capacitor, Through Hole, D8xL12mm, 8000hrs @ 105℃ | 10 | $0.47 | LCSC | [Product](https://www.lcsc.com/product-detail/C2831775.html?spm=wm.gwc.xh.12.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
+| Another Header Pin | Pin Header, 6 Position, 2.54mm Pitch, Single Row, Through Hole, -40℃~+105℃ | 20 | $0.88 | LCSC | [Product](https://www.lcsc.com/product-detail/C37208.html?spm=wm.gwc.xh.11.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
+| Pin Header | Pin Header, 3 Position, 2.54mm Pitch, Single Row, Through Hole, -40℃~+105℃ | 50 | $1.06 | LCSC | [Product](https://www.lcsc.com/product-detail/C49257.html?spm=wm.gwc.xh.10.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
+| DORABO Board Terminal Block | 2 Position Wire-to-Board Terminal Block, Through Hole, 5.08mm | 5 | $0.88 | LCSC | [Product](https://www.lcsc.com/product-detail/C395868.html?spm=wm.gwc.xh.9.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
+| Switch | Tactile Switch, SPST, 160gf, 1.4mm PC Pin, 6mm x 6mm, Through Hole | 5 | $0.50 | LCSC | [Product](https://www.lcsc.com/product-detail/C273465.html?spm=wm.gwc.dh.8.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
+| Regulator | 3.3V Positive Fixed SOT-223 Linear Low Dropout Voltage Regulator | 5 | $1.00 | LCSC | [Product](https://www.lcsc.com/product-detail/C6186.html?spm=wm.gwc.xh.7.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
+| MPU-6050 | QFN-24-EP(4x4) Accelerometer | 1 | $10.00 | LCSC | [Product](https://www.lcsc.com/product-detail/C24112.html?spm=wm.gwc.dh.5.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
+| ESP32-WROOM-32E | 2.4GHz ESP32-DOWD-V3 RF Transceiver Module with On-board PCB Antenna | 1 | $4.42 | LCSC | [Product](https://www.lcsc.com/product-detail/C701342.html?spm=wm.gwc.xh.4.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
+| Another Resistor | 10kΩ ±1% 125mW 0805 Thick Film Resistor | 100 | $0.30 | LCSC | [Product](https://www.lcsc.com/product-detail/C17414.html?spm=wm.gwc.xh.3.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
+| Resistor | 4.7kΩ ±1% 125mW 0805 Thick Film Resistor | 100 | $0.22 | LCSC | [Product](https://www.lcsc.com/product-detail/C17673.html?spm=wm.gwc.xh.2.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
+| Another Capacitor | 10uF ±10% 50V Ceramic Capacitor, X7R, 1206 | 5 | $0.43 | LCSC | [Product](https://www.lcsc.com/product-detail/C303950.html?spm=wm.gwc.xh.1.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
+| Capacitor | 100nF ±10% 50V Ceramic Capacitor, X7R, 0805 | 100 | $0.51 | LCSC | [Product](https://www.lcsc.com/product-detail/C49678.html?spm=wm.gwc.xh.0.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
+| BMP Sensor | Pressure sensor mounted directly on the PCB plate | 1 | $6.00 | LCSC | [Product](https://www.lcsc.com/product-detail/C83291.html?spm=wm.gwc.xh.6.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
+| Parachute D200 | Parachute for recovery system | 1 | $4.00 | Podarini | [Product](https://podarini.ru/zapasnye-chasti/obtekateli-nosovye-golovnaya-chast_1/parashyut-d200-chyornyy/) |
+| Rocket Motor RD1-20-5 | Small solid-fuel model rocket motor with ignition element, built-in delay, and ejection charge for recovery deployment | 1 | $4.93 | Podarini | [Product](https://podarini.ru/modelnye-raketnye-dvigateli/modelnyy-raketnyy-dvigatel-rd1-20-5/) |
+| Servo SG90 | Operates TVC and opens the recovery mechanism in the cone | 4 | $5.24 | AliExpress | [Product](https://aliexpress.ru/item/1005008707927948.html?sku_id=12000048410686232) |
 
+**Total Cost:** $51.36
