@@ -1,4 +1,4 @@
-# THErocket
+# THE rocket
 
 A personal model rocket engineering project focused on designing, building, and documenting a custom rocket with thrust vector control, onboard electronics, and a servo-based recovery mechanism.
 
@@ -81,7 +81,7 @@ Completed or in progress:
 
 ## Notes
 
-This repository documents the full development process of THErocket, including design decisions, component choices, electronics integration, and project progress.
+This repository documents the full development process of THE rocket, including design decisions, component choices, electronics integration, and project progress.
 
 ## BOM List
 
