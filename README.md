@@ -85,26 +85,22 @@ This repository documents the full development process of THE rocket, including 
 
 ## BOM List
 
-| Name | Purpose | Quantity | Total Cost (USD) | Distributor | Link |
-|---|---:|---:|---:|---|---|
-| Custom PCB | PCB used to connect and organize the onboard electronics | 5 | $10.52 | JLCPCB | — |
-| 470uF Capacitor | 470uF 25V aluminum electrolytic capacitor, through-hole, D8xL12mm, 8000hrs @ 105℃ | 10 | $0.47 | LCSC | [Product](https://www.lcsc.com/product-detail/C2831775.html?spm=wm.gwc.xh.12.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
-| 6-Pin Header | 6-position, 2.54mm pitch, single-row through-hole pin header | 20 | $0.88 | LCSC | [Product](https://www.lcsc.com/product-detail/C37208.html?spm=wm.gwc.xh.11.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
-| 3-Pin Header | 3-position, 2.54mm pitch, single-row through-hole pin header | 50 | $1.06 | LCSC | [Product](https://www.lcsc.com/product-detail/C49257.html?spm=wm.gwc.xh.10.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
-| Terminal Block | 2-position wire-to-board terminal block, through-hole, 5.08mm | 5 | $0.88 | LCSC | [Product](https://www.lcsc.com/product-detail/C395868.html?spm=wm.gwc.xh.9.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
-| Tactile Switch | SPST tactile switch, 160gf, 1.4mm PC pin, 6mm x 6mm, through-hole | 5 | $0.50 | LCSC | [Product](https://www.lcsc.com/product-detail/C273465.html?spm=wm.gwc.dh.8.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
-| 3.3V Regulator | 3.3V fixed SOT-223 linear low-dropout voltage regulator | 5 | $1.00 | LCSC | [Product](https://www.lcsc.com/product-detail/C6186.html?spm=wm.gwc.xh.7.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
-| MPU-6050 | Motion and orientation sensor | 1 | $10.00 | LCSC | [Product](https://www.lcsc.com/product-detail/C24112.html?spm=wm.gwc.dh.5.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
-| ESP32-WROOM-32E | Main microcontroller module with onboard PCB antenna | 1 | $4.42 | LCSC | [Product](https://www.lcsc.com/product-detail/C701342.html?spm=wm.gwc.xh.4.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
-| 10kΩ Resistor | 10kΩ ±1% 125mW 0805 thick-film resistor | 100 | $0.30 | LCSC | [Product](https://www.lcsc.com/product-detail/C17414.html?spm=wm.gwc.xh.3.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
-| 4.7kΩ Resistor | 4.7kΩ ±1% 125mW 0805 thick-film resistor | 100 | $0.22 | LCSC | [Product](https://www.lcsc.com/product-detail/C17673.html?spm=wm.gwc.xh.2.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
-| 10uF Capacitor | 10uF ±10% 50V X7R ceramic capacitor, 1206 | 5 | $0.43 | LCSC | [Product](https://www.lcsc.com/product-detail/C303950.html?spm=wm.gwc.xh.1.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
-| 100nF Capacitor | 100nF ±10% 50V X7R ceramic capacitor, 0805 | 100 | $0.51 | LCSC | [Product](https://www.lcsc.com/product-detail/C49678.html?spm=wm.gwc.xh.0.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
-| BMP Sensor | Pressure sensor mounted directly on the PCB for altitude tracking | 1 | $6.00 | LCSC | [Product](https://www.lcsc.com/product-detail/C83291.html?spm=wm.gwc.xh.6.cbm___wm.mxq.ssl.gwc&lcsc_vid=RwRZVVAAQFQLXlFXQ1gIBVADEgAIVlQEQ1lXBV1QRgUxVlNRQFNYUFZXRFZeUjsOAxUeFF5JWBYZEEoKFBINSQcJGk4NEhcSGAwLFUsPGQcBJAsKGwQNEw%3D%3D) |
-| Parachute D200 | Parachute for the recovery system | 1 | $4.00 | Podarini | [Product](https://podarini.ru/zapasnye-chasti/obtekateli-nosovye-golovnaya-chast_1/parashyut-d200-chyornyy/) |
-| Rocket Motor RD1-20-5 | Hobby model rocket motor | 1 | $4.93 | Podarini | [Product](https://podarini.ru/modelnye-raketnye-dvigateli/modelnyy-raketnyy-dvigatel-rd1-20-5/) |
-| SG90 Servo | Used for TVC actuation and recovery mechanism control | 4 | $5.24 | AliExpress | [Product](https://aliexpress.ru/item/1005008707927948.html?sku_id=12000048410686232) |
+| Name | Purpose | Qty | Total (USD) | Link | Distributor |
+|---|---|---:|---:|---|---|
+| 03EC0575 (C2831775) | Large servo rail capacitor to reduce voltage dips during servo movement. | 10 | 0.47 | [Link](https://www.lcsc.com/product-detail/C2831775.html) | LCSC |
+| DB128L-5.08-2P-GN-S (C395868) | Power input terminals for logic and servo power connections. | 5 | 0.99 | [Link](https://www.lcsc.com/product-detail/C395868.html) | LCSC |
+| 2.54-1*3P (C49257) | 3-pin servo headers for servo power, ground, and PWM signal. | 50 | 1.06 | [Link](https://www.lcsc.com/product-detail/C49257.html) | LCSC |
+| 2.54-1x6P (C37208) | UART programming header for flashing/debugging ESP32. | 20 | 0.88 | [Link](https://www.lcsc.com/product-detail/C37208.html) | LCSC |
+| 1206B106K500NT (C303950) | Bulk/decoupling capacitors for stable 3.3V regulator input/output and logic power. | 5 | 0.43 | [Link](https://www.lcsc.com/product-detail/C303950.html) | LCSC |
+| 0805W8F4701T5E (C17673) | I2C pull-up resistors for SDA and SCL lines. | 100 | 0.22 | [Link](https://www.lcsc.com/product-detail/C17673.html) | LCSC |
+| 0805W8F1002T5E (C17414) | Pull-up/pull-down resistors for ESP32 boot/reset and sensor address configuration. | 100 | 0.30 | [Link](https://www.lcsc.com/product-detail/C17414.html) | LCSC |
+| ESP32-WROOM-32E-N8 (C701342) | Main microcontroller module for sensor reading, servo control, and wireless debugging. | 1 | 4.42 | [Link](https://www.lcsc.com/product-detail/C701342.html) | LCSC |
+| MPU-6050 (C24112) | IMU sensor for acceleration and angular velocity measurement during rocket flight. | 1 | 9.99 | [Link](https://www.lcsc.com/product-detail/C24112.html) | LCSC |
+| BMP280 (C83291) | Barometric pressure sensor for altitude/pressure measurement. | 1 | 6.03 | [Link](https://www.lcsc.com/product-detail/C83291.html) | LCSC |
+| CC0805KRX7R9BB104 (C49678) | Decoupling capacitors for ESP32, MPU6050, BMP280, and power rail noise filtering. | 100 | 0.53 | [Link](https://www.lcsc.com/product-detail/C49678.html) | LCSC |
+| AMS1117-3.3 (C6186) | 3.3V voltage regulator for ESP32 and sensors. | 5 | 1.07 | [Link](https://www.lcsc.com/product-detail/C6186.html) | LCSC |
+| TL1105AF160Q (C273465) | Reset and boot tactile buttons for programming and manual restart. | 5 | 0.48 | [Link](https://www.lcsc.com/product-detail/C273465.html) | LCSC |
+| Parachute d200 | Parachute for rocket recovery. | 1 | 4.00 | [Link](https://podarini.ru/zapasnye-chasti/obtekateli-nosovye-golovnaya-chast_1/parashyut-d200-chyornyy/) | podarini |
+| Rocket motors RD1-20-5 | Small solid-fuel model rocket motor with ignition element, delay, and ejection charge for recovery deployment. | 1 | 4.93 | [Link](https://podarini.ru/modelnye-raketnye-dvigateli/modelnyy-raketnyy-dvigatel-rd1-20-5/) | podarini |
+| Servo SG90 | Operates TVC and opens the recovery mechanism in the cone. | 4 | 5.24 | [Link](https://aliexpress.ru/item/1005008707927948.html?sku_id=12000048410686232) | aliexpress |
 
-**Parts Total:** $51.36  
-**Shipping:** $25.31  
-**Estimated Total:** $76.67
