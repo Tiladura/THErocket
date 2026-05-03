@@ -100,7 +100,5 @@ This repository documents the full development process of THE rocket, including 
 | CC0805KRX7R9BB104 (C49678) | Decoupling capacitors for ESP32, MPU6050, BMP280, and power rail noise filtering. | 100 | 0.53 | [Link](https://www.lcsc.com/product-detail/C49678.html) | LCSC |
 | AMS1117-3.3 (C6186) | 3.3V voltage regulator for ESP32 and sensors. | 5 | 1.07 | [Link](https://www.lcsc.com/product-detail/C6186.html) | LCSC |
 | TL1105AF160Q (C273465) | Reset and boot tactile buttons for programming and manual restart. | 5 | 0.48 | [Link](https://www.lcsc.com/product-detail/C273465.html) | LCSC |
-| Parachute d200 | Parachute for rocket recovery. | 1 | 4.00 | [Link](https://podarini.ru/zapasnye-chasti/obtekateli-nosovye-golovnaya-chast_1/parashyut-d200-chyornyy/) | podarini |
-| Rocket motors RD1-20-5 | Small solid-fuel model rocket motor with ignition element, delay, and ejection charge for recovery deployment. | 1 | 4.93 | [Link](https://podarini.ru/modelnye-raketnye-dvigateli/modelnyy-raketnyy-dvigatel-rd1-20-5/) | podarini |
 | Servo SG90 | Operates TVC and opens the recovery mechanism in the cone. | 4 | 5.24 | [Link](https://aliexpress.ru/item/1005008707927948.html?sku_id=12000048410686232) | aliexpress |
 
